@@ -1,0 +1,142 @@
+.header-link-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-link {
+  font-weight: 700;
+  color: #246029;
+  display: inline-block;
+  padding: 6px;
+  background-color: #303f323a;
+  border-radius: 4px;
+}
+
+.main-link:hover {
+  color: #318137;
+  background-color: #536d574f;
+}
+
+.main-link:active {
+  color: #00ff15;
+  background-color: #536d574f;
+}
+
+.main-link.login-btn {
+  background: #2b533062;
+  padding: 6px 16px;
+  border: 1px solid #246029;
+  border-radius: 8px;
+}
+
+.summary {
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.monospace {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.picture {
+  width: 500px;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* slider */
+
+.slider-container {
+  position: relative;
+  background-image: linear-gradient(to bottom,
+      rgb(240, 196, 158) 30%,
+      rgb(138, 96, 60));
+}
+
+.slide {
+  display: none;
+}
+
+.slide.center {
+  display: flex;
+  justify-content: center;
+}
+
+.slide img {
+  height: auto;
+  width: 500px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #3a2c21;
+  padding: 2px 16px;
+  color: white;
+}
+
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.thumbnails img {
+  width: 100%;
+  height: auto;
+}
+
+.thumb {
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.active,
+.thumb:hover {
+  opacity: 1;
+}

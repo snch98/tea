@@ -1,0 +1,52 @@
+main.form-wrapper {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 36%;
+    padding: 30px 25px 15px;
+    background: rgb(197, 145, 100);
+    border: 2px solid rgb(138, 96, 60);
+    border-radius: 16px;
+}
+
+.username-password-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+}
+
+.control-buttons.login {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.control-buttons.login button {
+    padding: 4px 16px;
+    font-size: 18px;
+    background-color: rgb(240, 196, 158);
+    border: 1px solid rgb(138, 96, 60);
+    border-radius: 4px;
+}
+
+.control-buttons.login button:hover {
+    background-color: rgb(211, 163, 122);
+}
+
+.login-link {
+    color: rgb(110, 74, 43);
+}
+
+.login-link:hover {
+    color: rgb(77, 52, 30);
+}
+
+.login-link:active {
+    color: rgb(37, 25, 13);
+}

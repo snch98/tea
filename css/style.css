@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: rgb(240, 196, 158);
+    color: #332211;
+    margin: 0;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header, 
+footer {
+    background-color: rgb(197, 145, 100);
+    padding: 10px 20px;
+}
+
+header {
+    border-bottom: 2px solid rgb(138, 96, 60);
+}
+
+footer {
+    border-top: 2px solid rgb(138, 96, 60);
+}
+
+header h1,
+header h3 {
+    margin: 8px 0;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+main {
+    padding: 10px 20px;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pages-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.pages-links a {
+    font-weight: 700;
+    color: #246029;
+}
+
+.pages-links a:hover {
+    color: #318137;
+}
+
+.pages-links a:active {
+    color: #003004;
+}
+
+ul li {
+    list-style: none;
+    background: url('../media/tea_cup.svg') no-repeat left;
+    padding-left: 2em;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+th, td {
+    border: 1px solid rgb(138, 96, 60);
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: rgb(197, 145, 100);
+}
+
+button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a#email,
+footer a.main {
+    font-size: 18px;
+    margin: 16px 0;
+}
+
+footer p {
+    display: flex;
+    align-items: center;
+}

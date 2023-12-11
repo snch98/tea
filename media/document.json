@@ -1,0 +1,13 @@
+{
+    "fact": "Tea is the second most consumed beverage in the world, after water. It is enjoyed in various forms across different cultures and has a rich history dating back thousands of years.",
+    "type": "Beverage",
+    "origin": "China (legendary origin), but widely produced in countries like India, Sri Lanka, Japan, and Kenya",
+    "varieties": ["Green tea", "Black tea", "Oolong tea", "White tea", "Herbal tea"],
+    "healthBenefits": ["Rich in antioxidants", "May reduce the risk of heart diseases", "Contains less caffeine than coffee", "May improve mental alertness"],
+    "customs": {
+      "China": "Tea ceremonies are an important part of Chinese culture, often representing hospitality and respect.",
+      "Japan": "Japanese tea ceremonies, known as 'sado' or 'chanoyu', emphasize aesthetics and manners.",
+      "England": "Afternoon tea, a tradition in England, includes tea served with sandwiches, scones, and pastries."
+    },
+    "author": "Sofiia Chekmenova"
+}

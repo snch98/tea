@@ -1,0 +1,54 @@
+.form-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+form.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+    width: 369px;
+}
+
+.name-country-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"]
+{
+    width: 100%;
+    outline: none;
+    background-color: rgb(240, 196, 158);
+    border: none;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, rgb(138, 96, 60), rgb(240, 196, 158) 88%) 1;
+}
+
+textarea#suggestions {
+    background-color: rgb(240, 196, 158);
+    border: 2px solid rgb(138, 96, 60);
+    outline: none;
+}
+
+.radio-like {
+    display: flex;
+    flex-flow: column;
+}
+
+.control-buttons button {
+    padding: 4px 16px;
+    background-color: rgb(240, 196, 158);
+    border: 1px solid rgb(138, 96, 60);
+    border-radius: 4px;
+}
+
+.control-buttons button:hover {
+    background-color: rgb(211, 163, 122);
+}
