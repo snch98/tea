@@ -1,6 +1,6 @@
 <?php
 $title = "Green Tea";
-include("includes/header.php");
+include("php/includes/header.php");
 ?>
 <main>
     <h2>Summary</h2>
@@ -101,5 +101,5 @@ include("includes/header.php");
 
 
 <?php
-include("includes/footer.php");
+include("php/includes/footer.php");
 ?>

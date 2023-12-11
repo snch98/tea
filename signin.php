@@ -2,7 +2,7 @@
 $title = "Login Page";
 $hasForm = true;
 $isLogin = true;
-include("includes/header.php");
+include("php/includes/header.php");
 require("php/functions/LoginFunctions.php");
 ?>
 
@@ -12,4 +12,4 @@ createLoginForm();
 ?>
 </main>
 
-<?php include("includes/footer.php") ?>
+<?php include("php/includes/footer.php") ?>

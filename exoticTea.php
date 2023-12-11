@@ -1,6 +1,6 @@
 <?php
 $title = "Exotic Tea";
-include("includes/header.php");
+include("php/includes/header.php");
 ?>
 
 <main>
@@ -88,5 +88,5 @@ include("includes/header.php");
 
 
 <?php
-include("includes/footer.php");
+include("php/includes/footer.php");
 ?>

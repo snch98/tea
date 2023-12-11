@@ -4,9 +4,9 @@ function listKindsOfTeas($conn)
     $sql = "SELECT tea_kind FROM kinds_of_teas";
     $result = $conn->query($sql);
     while ($row = $result->fetch_assoc()) {
-        $kindName = $row["tea_kind"];
-        $linkParts = explode(" ", $kindName);
-        $linkName = $linkParts[0] . $linkParts[1];
+        $kindName = $row["tea_kind"]; // Black Tea
+        $linkParts = explode(" ", $kindName); // ["Black", "Tea"]
+        $linkName = $linkParts[0] . $linkParts[1]; // "BlackTea"
 
         echo "<a href='$linkName.php' target='_blank'>" . $kindName . "<a>";
     }
@@ -46,7 +46,7 @@ function listInventoryOfTeas($conn, $teaKind = "all")
         $sql = $sql . $whereClause;
     }
 
-    $result = $conn->query($sql);
+    $result = $conn->query($sql); // execute sql
 
     while ($row = $result->fetch_assoc()) {
         $id = $row["id"];
@@ -64,7 +64,6 @@ function listInventoryOfTeas($conn, $teaKind = "all")
         $teaKind = $row["tea_kind"];
 
         $countryName = $row["country_name"];
-
 
         echo "<section class='product-card' id='$id'>
         <img src='media/tea-varieties/$pictureName.png' alt='$varietyName'>
