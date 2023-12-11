@@ -1,7 +1,8 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require_once "./DbConnect.php";
 
+    // test commit
     $sql = "INSERT INTO users (`username`, `password`, email) VALUES (?, ?, ?)";
 
     echo $sql;
