@@ -102,7 +102,7 @@ footer {
 }
 
 footer a#email,
-footer a.main {
+footer a.main-link {
     font-size: 18px;
     margin: 16px 0;
 }

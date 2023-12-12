@@ -1,5 +1,5 @@
 <?php
-$title = "Login Page";
+$title = "Registration Page";
 $hasForm = true;
 $isLogin = true;
 include("php/includes/header.php");

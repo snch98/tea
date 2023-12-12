@@ -1,5 +1,6 @@
-<?php 
-function createRegistrationForm() {
+<?php
+function createRegistrationForm()
+{
 
     echo "<form id='login-form' action='php/RegisterNewAccount.php' method='post'>
     <div class='username-password-fields'>
@@ -28,9 +29,9 @@ function createRegistrationForm() {
 </form>";
 }
 
-function createLoginForm() {
-
-    echo "<form id='login-form' action='Register.php' method='post'>
+function createLoginForm()
+{
+    echo "<form id='login-form' action='" . htmlspecialchars($_SERVER["PHP_SELF"]) . "' method='post'>
     <div>
         <label for='username'>Username</label>
         <input type='text' name='username'>
@@ -48,5 +49,12 @@ function createLoginForm() {
     <a class='login-link' href='register.php'>Don't have an account?</a>
 </form>";
 
+}
+
+function checkLogin()
+{
+    session_start();
+    $sessionVar = $_SESSION["isLoggedIn"];
+    return isset($sessionVar) && $sessionVar == true;
 }
 ?>
