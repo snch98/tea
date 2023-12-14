@@ -1,8 +1,7 @@
 <?php
 function createRegistrationForm()
 {
-
-    echo "<form id='login-form' action='php/RegisterNewAccount.php' method='post'>
+    echo "<form id='registration-form' action='". htmlspecialchars($_SERVER["PHP_SELF"]) . "' method='post'>
     <div class='username-password-fields'>
         <div>
             <label for='username'>Your username</label>
@@ -54,7 +53,22 @@ function createLoginForm()
 function checkLogin()
 {
     session_start();
-    $sessionVar = $_SESSION["isLoggedIn"];
-    return isset($sessionVar) && $sessionVar == true;
+    return isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] == true;
+}
+
+function showLoginButton() {
+    echo "<a class='main-link login-btn' href='signin.php'>Sign In</a>";
+}
+
+function showLogoutButton() {
+    echo "
+        <div>
+            <a class='main-link login-btn' href='signout.php'>Sign Out</a>
+            <a class='cart-link' href='cart.php'>
+                Cart
+                <img src='media/shopping-cart-icon.svg' alt='Cart Icon' class='cart-icon'>
+            </a>
+        </div>
+    ";
 }
 ?>

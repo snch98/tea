@@ -50,7 +50,7 @@ function listInventoryOfTeas($conn, $teaKind = "all")
 
     while ($row = $result->fetch_assoc()) {
         $id = $row["id"];
-        $idAvailable = $row["is_available"];
+        $isAvailable = $row["is_available"];
         $quantity = $row["quantity_in_stock"];
         $restockDate = $row["last_restock_date"];
 
@@ -65,7 +65,15 @@ function listInventoryOfTeas($conn, $teaKind = "all")
 
         $countryName = $row["country_name"];
 
-        echo "<section class='product-card' id='$id'>
+
+
+        $outOfStockClass = !$isAvailable ? " out-of-stock" : "";
+        $className = "product-card" . $outOfStockClass;
+
+        $outOfStockMessage = !$isAvailable ? "<h2 class=out-of-stock-message>Out of stock!</h2>" : "";
+
+        echo "<section class='$className' id='$id'>
+        $outOfStockMessage
         <img src='media/tea-varieties/$pictureName.png' alt='$varietyName'>
 
         <div class='text-container'>

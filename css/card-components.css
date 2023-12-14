@@ -6,6 +6,7 @@
 }
 
 section.product-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,10 +16,27 @@ section.product-card {
     background: rgb(226, 173, 126);
 }
 
+.out-of-stock {
+    filter: grayscale(0.6);
+}
+
+.out-of-stock-message {
+    position: absolute;
+    background: #ffffffa4;
+    padding: 15px;
+    transform: translate(-50%, -50%);
+    top: 20%;
+    left: 50%;
+    user-select: none;
+}
+
 section.product-card h2 {
     margin-bottom: 0;
     margin-top: 10px;
     font-size: 30px;
+    --webkit-line-clamp: 1;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 section.product-card img {

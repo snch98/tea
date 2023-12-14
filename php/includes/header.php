@@ -39,9 +39,9 @@
 
             <?php
             if (checkLogin()) {
-                echo "<a class='main-link login-btn' href='signout.php'>Sign Out</a>";
+                showLogoutButton();
             } else {
-                echo "<a class='main-link login-btn' href='signin.php'>Sign In</a>";
+                showLoginButton();
             }
             ?>
         </div>
