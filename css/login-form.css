@@ -21,6 +21,13 @@ form {
     gap: 0 20px;
 }
 
+input.invalid-field {
+    background-color: rgb(240, 158, 158);
+    border: none;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, rgb(138, 60, 60), rgb(240, 158, 158) 88%) 1;
+}
+
 .control-buttons.login {
     display: flex;
     justify-content: center;
@@ -49,4 +56,14 @@ form {
 
 .login-link:active {
     color: rgb(37, 25, 13);
+}
+
+.validation-error {
+    display: block;
+    color: rgb(139, 0, 0);
+    font-size: 14px;
+    padding: 2px 0;
+    margin: 4px 0 0;
+    background-color: rgba(255, 0, 0, 0.18);
+    border-radius: 4px;
 }

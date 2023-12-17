@@ -11,12 +11,15 @@
         <?php echo $title ?>
     </title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header-footer-style.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/card-components.css">
     <?php if (isset($hasForm) && $hasForm)
         echo "<link rel='stylesheet' href='css/feedback-form.css'>"; ?>
     <?php if (isset($isLogin) && $isLogin)
         echo "<link rel='stylesheet' href='css/login-form.css'>"; ?>
+    <?php if (isset($isUser) && $isUser)
+        echo "<link rel='stylesheet' href='css/user-styles.css'>"; ?>
     <?php if (isset($isMain) && $isMain)
         echo "<script src='script/slider.js' async></script>"; ?>
 </head>
@@ -30,7 +33,7 @@
     <header>
         <h1>My Name Is Sofiia And This Is My Webpage About Tea</h1>
         <div class="header-link-group">
-            <div>
+            <div class="header-pages-links">
                 <a class="main-link" href="index.php">Home Page</a>
                 <a class="main-link" href="blackTea.php" target="_blank">Black Tea</a>
                 <a class="main-link" href="greenTea.php" target="_blank">Green Tea</a>

@@ -16,26 +16,6 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 
-header, 
-footer {
-    background-color: rgb(197, 145, 100);
-    padding: 10px 20px;
-}
-
-header {
-    border-bottom: 2px solid rgb(138, 96, 60);
-}
-
-footer {
-    border-top: 2px solid rgb(138, 96, 60);
-}
-
-header h1,
-header h3 {
-    margin: 8px 0;
-}
-
-
 a {
     text-decoration: none;
 }
@@ -94,20 +74,4 @@ th {
 
 button {
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-}
-
-footer a#email,
-footer a.main-link {
-    font-size: 18px;
-    margin: 16px 0;
-}
-
-footer p {
-    display: flex;
-    align-items: center;
 }
