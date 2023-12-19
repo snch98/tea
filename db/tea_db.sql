@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost
--- Время создания: Дек 11 2023 г., 23:26
+-- Время создания: Дек 19 2023 г., 22:12
 -- Версия сервера: 10.4.28-MariaDB
 -- Версия PHP: 8.2.4
 
@@ -146,8 +146,18 @@ CREATE TABLE `users` (
   `user_id` int(3) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `email` varchar(50) NOT NULL
+  `email` varchar(50) NOT NULL,
+  `created_at` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`user_id`, `username`, `password`, `email`, `created_at`) VALUES
+(14, 'snch', '$2y$10$1M6G8m.R2wnu5Pm31yFY1uXL4cddYmry9eFuy7JIpZpGjHA68Ig/.', 'snch@gmail.com', '2023-12-12'),
+(15, 'tsehla', '$2y$10$KfBFP2faHdmo8Wustd3.Q.irNqwwlzfXuLEzfYlwGvVX04YvSy4i.', 'tsehla@gmail.com', '2023-12-12'),
+(16, 'Sonya', '$2y$10$fmDqjmUIg6uMFXkcuhnnXOaZYLhPjq9MKrTLadlCIBtgN3MQW/jie', 'sonya@gmail.com', '2023-12-18');
 
 --
 -- Индексы сохранённых таблиц
@@ -221,7 +231,7 @@ ALTER TABLE `tea_varieties`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

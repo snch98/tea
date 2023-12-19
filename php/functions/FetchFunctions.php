@@ -70,7 +70,14 @@ function listInventoryOfTeas($conn, $teaKind = "all")
         $outOfStockClass = !$isAvailable ? " out-of-stock" : "";
         $className = "product-card" . $outOfStockClass;
 
-        $outOfStockMessage = !$isAvailable ? "<h2 class=out-of-stock-message>Out of stock!</h2>" : "";
+        $outOfStockMessage = !$isAvailable ? "<h2 class='out-of-stock-message'>Out of stock!</h2>" : "";
+
+        $isCostReduced = $isAvailable && $id % 3 == 1;
+        $rawReducedCost = $cost - ($cost * 0.05) - ($kindId * 1.4) - ($id / 1.8);
+        $reducedCost = floor($rawReducedCost * 100) / 100;
+        $reducedCostMessage = $isCostReduced ? "<p class='reduced-cost'>Reduced cost: <span>$reducedCost$</span> per $unit</p>" : "";
+
+        $costClassName = $isCostReduced ? "cost reduced" : "cost";
 
         echo "<section class='$className' id='$id'>
         $outOfStockMessage
@@ -87,9 +94,9 @@ function listInventoryOfTeas($conn, $teaKind = "all")
                 <p>Quantity: <span>$quantity</span></p>
                 <p>Last restock: <span>$restockDate</span></p>
             </div>
-            <p class='cost'>Cost: <span>$cost$</span> per $unit</p>
-        </div>
-
+            <p class='$costClassName'>Cost: <span>$cost$</span> per $unit</p>
+            $reducedCostMessage
+            </div>
     </section>";
     }
 }

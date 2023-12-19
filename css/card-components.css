@@ -71,3 +71,23 @@ section.product-card .cost span {
     font-weight: bold;
 }
 
+section.product-card .cost.reduced {
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+section.product-card .reduced-cost {
+    text-align: right;
+    font-size: 20px;
+    margin: 16px 0 0;
+    color: rgb(230, 38, 38);
+    --webkit-line-clamp: 1;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+section.product-card .reduced-cost span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
