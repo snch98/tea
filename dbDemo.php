@@ -32,6 +32,7 @@ added "Out of stock" banner to product card
 done implementing registration feature
 added password hashing feature
 implemented login functionality
+added saving user to session storage
 added cookie saving
 signin refactoring
 started implementing user editing features (change name/email/pass)

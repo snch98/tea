@@ -8,8 +8,6 @@ require_once "php/DbConnect.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO users (username, `password`, email) VALUES (?, ?, ?)";
 
-    echo $sql;
-    //exit();
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sss", $username, $password, $email);
 
@@ -18,8 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST["email"]);
 
     $password = password_hash($password, PASSWORD_DEFAULT);
-
-    echo $password;
 
     if ($stmt->execute()) {
         header("Location:http://localhost/tea/signin.php");

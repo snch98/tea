@@ -42,7 +42,7 @@
 
             <?php
             if (checkLogin()) {
-                showLogoutButton();
+                showUserProfile();
             } else {
                 showLoginButton();
             }

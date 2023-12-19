@@ -5,6 +5,13 @@
     padding: 30px 0;
 }
 
+.user-edit-content .profile-links {
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+    margin: 10px 10px 0 20px;
+}
+
 .user-edit-content form {
     display: flex;
     flex-flow: column;
@@ -19,4 +26,24 @@
 .user-edit-content form input {
     font-size: 14px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input.invalid-field {
+    border: none;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, rgb(138, 60, 60), rgb(240, 158, 158) 88%) 1;
+  }
+
+#delete-link {
+    color: rgb(129, 0, 0);
+    font-weight: bold;
+}
+
+#delete-link:hover {
+    color: red;
+    font-weight: bold;
+}
+
+.deletion-form {
+    
 }

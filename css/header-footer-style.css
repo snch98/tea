@@ -83,6 +83,7 @@ footer p {
     background: #9c665f;
     border: 2px solid #502e2e;
     border-radius: 50%;
+    transition: 0.2s;
 }
 
 .default {
@@ -134,21 +135,4 @@ footer p {
 .dropdown-links {
     display: flex;
     flex-flow: column;
-}
-
-.dropdown-links a {
-    color: #332211;
-}
-
-.dropdown-links a:hover {
-    color: #6d4823;
-}
-
-.main-link.user-link:hover {
-    background-color: #273d2a60;
-}
-
-.main-link.user-link .cart-icon {
-    width: 16px;
-    height: 16px;
 }

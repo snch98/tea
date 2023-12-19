@@ -28,32 +28,6 @@ function createRegistrationForm()
 </form>";
 }
 
-function createLoginForm()
-{
-    echo "<form id='login-form' action='" . htmlspecialchars($_SERVER["PHP_SELF"]) . "' method='post'>
-    <div>
-        <label for='username'>Username</label>
-        <input type='text' name='username'>
-        <span class=''>Please enter username</span>
-    </div>
-
-    <div>
-        <label for='password'>Password</label>
-        <input type='password' name='password'>
-        <span class=''>Please enter password</span>
-    </div>
-
-    <p>Invalid username or password</p>
-
-    <div class='control-buttons login'>
-        <button type='submit'>Sign In</button>
-    </div>
-
-    <a class='login-link' href='register.php'>Don't have an account?</a>
-</form>";
-
-}
-
 function checkLogin()
 {
     session_start();
@@ -74,7 +48,7 @@ function getInitials() {
     return $firstLetter;
 }
 
-function showLogoutButton() {
+function showUserProfile() {
     $initials = getInitials();
     
     echo "
@@ -83,8 +57,8 @@ function showLogoutButton() {
                 <span>$initials</span>
                 <div class='profile-dropdown-content'>
                     <div class='dropdown-links'>
-                        <a href='user.php'>Edit Profile</a>
-                        <a href='signout.php'>Sign Out</a>
+                        <a href='user.php' class='secondary-link'>Edit Profile</a>
+                        <a href='signout.php' class='secondary-link'>Sign Out</a>
                     </div>
                 </div>
             </div>

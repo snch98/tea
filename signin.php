@@ -46,6 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION["isLoggedIn"] = true;
                     $_SESSION["username"] = $username;
                     $_SESSION["email"] = $email;
+                    $_SESSION["passwordHash"] = $hashedPassword;
 
                     header("Location: http://localhost/tea/index.php");
                 } else {
