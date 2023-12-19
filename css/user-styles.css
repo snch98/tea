@@ -23,7 +23,8 @@
     font-weight: bold;
 }
 
-.user-edit-content form input {
+.user-edit-content form input,
+.deletion-form form input {
     font-size: 14px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -36,6 +37,9 @@ input.invalid-field {
 
 #delete-link {
     color: rgb(129, 0, 0);
+    background: none;
+    border: none;
+    outline: none;
     font-weight: bold;
 }
 
@@ -45,5 +49,20 @@ input.invalid-field {
 }
 
 .deletion-form {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.delete-confirmation {
+    width: 42%;
+}
+
+.deletion-form form {
+    display: flex;
+    flex-flow: column;
+    border: 2px solid rgb(138, 96, 60);
+    border-radius: 16px;
+    padding: 30px 25px 15px;
 }

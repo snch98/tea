@@ -42,8 +42,6 @@ function getInitials() {
     $username = isset($_SESSION["username"]) ? strtoupper($_SESSION["username"]) : "";
     $usernameParts = explode(" ", $username);
     $firstLetter = mb_substr($usernameParts[0], 0, 1);
-    $lastLetter = mb_substr($usernameParts[1], 0, 1);
-    $initials = $firstLetter . $lastLetter;
 
     return $firstLetter;
 }

@@ -27,10 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $oldPasswordError = "Password doesn't match your current password";
     }
 
-
-    //echo "U: " . $username . " new U: ". $newUsername . "E: ". $email . "new E: " . $newEmail;
-
-
     if (empty($oldPasswordError)) {
         $newUsername = trim($_POST["username"]);
         $newEmail = trim($_POST["email"]);

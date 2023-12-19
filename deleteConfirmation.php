@@ -1,6 +1,7 @@
 <?php
 $title = "Delete Account?";
 $isUser = true;
+$hasForm = true;
 include("php/includes/header.php");
 
 if (!checkLogin()) {
@@ -8,6 +9,12 @@ if (!checkLogin()) {
     exit;
 }
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["confirm"]) && $_POST["confirm"] == "I want to delete my account") {
+        header("Location: http://localhost/tea/delete.php");
+        exit;
+    }
+}
 ?>
 <main>
     <div class="deletion-form">
@@ -16,12 +23,20 @@ if (!checkLogin()) {
             <h2>This action cannot be undone</h2>
             <h3>When you click the following link, your account will be deleted forever</h3>
             <h4>Please, ensure that you know what you are doing</h4>
-            <h5>If you are not sure, <a href="index.php" class="secondary-link">click this to return to home page</a>
-            </h5>
+            <h4>If you are not sure, <a href="index.php" class="main-link">click this to return to home page</a>
+            </h4>
         </div>
 
         <div>
-            <a href="" id="main-link">Click here to delete your account.</a>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+                <div>
+                    <div>
+                        <label for="confirm">Enter "I want to delete my account" and click the following link</label>
+                        <input type="text" name="confirm">
+                    </div>
+                    <button id="delete-link" type="submit">Click here to delete your account.</a>
+                </div>
+            </form>
         </div>
     </div>
 
