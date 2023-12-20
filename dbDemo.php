@@ -1,11 +1,7 @@
 <?php
 $title = "DB demo";
 include("php/includes/header.php");
-// todo: display all data here
-// todo: add relations picture
-
 /*
-
 13 - 19 ноября 
 installed XAMPP
 changed .html to .php
@@ -23,6 +19,7 @@ added picture_name field to tea_varieties table
 created combined search from all the 4 tables (SQL script)
 displayed composite output from the search on main page (tea cards)
 improved SQL script to display only specific kind of tea (black / etc.)
+(6, )
 
 4 - 10 декабря
 added users table to the DB
@@ -44,10 +41,6 @@ implemented account edition
 implemented account deletion
 created DB demo
 */
-
-
-
-
 ?>
 <main>
     <div>

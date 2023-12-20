@@ -65,11 +65,8 @@ function listInventoryOfTeas($conn, $teaKind = "all")
 
         $countryName = $row["country_name"];
 
-
-
         $outOfStockClass = !$isAvailable ? " out-of-stock" : "";
         $className = "product-card" . $outOfStockClass;
-
         $outOfStockMessage = !$isAvailable ? "<h2 class='out-of-stock-message'>Out of stock!</h2>" : "";
 
         $isCostReduced = $isAvailable && $id % 3 == 1;
